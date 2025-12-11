@@ -1,239 +1,503 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Política de Privacidad – CormeiPro</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Política de Privacidad – Cormei Sac</title>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              light: '#dc2626', // red-600
-              DEFAULT: '#b91c1c', // red-700
-              dark: '#991b1b', // red-800
-            },
-          },
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#ef4444', // red-500 optimized
+                            DEFAULT: '#dc2626', // red-600 optimized
+                            dark: '#b91c1c', // red-700 optimized
+                            darker: '#7f1d1d', // red-900
+                        },
+                        slate: {
+                            850: '#1e293b',
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+                        'gleam': '0 0 15px rgba(220, 38, 38, 0.15)',
+                    }
+                }
+            }
         }
-      }
-    }
-  </script>
+    </script>
 
-  <meta name="robots" content="noindex,follow" />
-  <meta name="theme-color" content="#b91c1c" />
+    <meta name="robots" content="noindex,follow" />
+    <meta name="theme-color" content="#dc2626" />
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23b91c1c'/%3E%3Ctext x='50' y='58' font-size='56' text-anchor='middle' fill='white' font-family='Arial,Helvetica,sans-serif'%3EC%3C/text%3E%3C/svg%3E" />
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23dc2626'/%3E%3Ctext x='50' y='58' font-size='56' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EC%3C/text%3E%3C/svg%3E" />
 
-  <style>
-    /* Agrega un padding superior al hacer scroll para que los títulos no queden ocultos */
-    section[id] {
-      scroll-margin-top: 80px;
-    }
-    @media (min-width: 1024px) {
-      section[id] {
-        scroll-margin-top: 40px;
-      }
-    }
-  </style>
+    <style>
+        /* Ajuste de scroll */
+        section[id] {
+            scroll-margin-top: 100px;
+        }
+
+        /* Estilos base para la tipografía del contenido (Prose-like) */
+        .content-body h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e2e8f0;
+            letter-spacing: -0.025em;
+        }
+
+        .content-body h2:first-child {
+            margin-top: 0;
+        }
+
+        .content-body h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #334155;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .content-body p {
+            margin-bottom: 1rem;
+            line-height: 1.75;
+            color: #475569;
+        }
+
+        .content-body ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+            color: #475569;
+        }
+
+        .content-body li {
+            margin-bottom: 0.5rem;
+            line-height: 1.7;
+        }
+
+        .content-body strong {
+            color: #1e293b;
+            font-weight: 600;
+        }
+
+        .content-body a {
+            color: #dc2626;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .content-body a:hover {
+            color: #b91c1c;
+            border-bottom-color: #b91c1c;
+        }
+
+        .content-body .lead {
+            font-size: 1.125rem;
+            color: #334155;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        /* Scrollbar personalizado */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
 </head>
 
-<body class="bg-slate-50 text-slate-700 antialiased">
-  <header class="bg-brand text-white shadow-md">
-    <div class="max-w-7xl mx-auto px-6 py-12 text-center">
-      <h1 class="text-4xl md:text-5xl font-bold tracking-tight">Política de Privacidad</h1>
-      <p class="mt-3 text-lg text-white/90">Para la aplicación móvil <strong>CormeiPro</strong></p>
-    </div>
-  </header>
+<body class="bg-slate-50 text-slate-700 antialiased font-sans selection:bg-brand-light selection:text-white">
 
-  <main class="max-w-7xl mx-auto px-6 py-10 lg:py-16">
-    <div class="lg:grid lg:grid-cols-12 lg:gap-8">
-      
-      <aside class="lg:col-span-3 lg:sticky lg:top-8 self-start">
-        <nav>
-          <p class="font-semibold text-slate-800 mb-3">Índice de Contenidos</p>
-          <ol id="toc-nav" class="space-y-2 text-sm">
-            <li><a class="block rounded-md px-3 py-2 text-slate-600 hover:bg-brand-light hover:text-white transition-colors duration-200" href="#responsable">1. Responsable del tratamiento</a></li>
-            <li><a class="block rounded-md px-3 py-2 text-slate-600 hover:bg-brand-light hover:text-white transition-colors duration-200" href="#datos-que-recopilamos">2. Datos que recopilamos</a></li>
-            <li><a class="block rounded-md px-3 py-2 text-slate-600 hover:bg-brand-light hover:text-white transition-colors duration-200" href="#permisos">3. Permisos de Android</a></li>
-            <li><a class="block rounded-md px-3 py-2 text-slate-600 hover:bg-brand-light hover:text-white transition-colors duration-200" href="#finalidades">4. Finalidades</a></li>
-            <li><a class="block rounded-md px-3 py-2 text-slate-600 hover:bg-brand-light hover:text-white transition-colors duration-200" href="#bases-legales">5. Bases legales</a></li>
-            <li><a class="block rounded-md px-3 py-2 text-slate-600 hover:bg-brand-light hover:text-white transition-colors duration-200" href="#conservacion">6. Conservación</a></li>
-            <li><a class="block rounded-md px-3 py-2 text-slate-600 hover:bg-brand-light hover:text-white transition-colors duration-200" href="#comparticion">7. Cesión y terceros</a></li>
-            <li><a class="block rounded-md px-3 py-2 text-slate-600 hover:bg-brand-light hover:text-white transition-colors duration-200" href="#seguridad">8. Seguridad</a></li>
-            <li><a class="block rounded-md px-3 py-2 text-slate-600 hover:bg-brand-light hover:text-white transition-colors duration-200" href="#tus-derechos">9. Tus derechos</a></li>
-            <li><a class="block rounded-md px-3 py-2 text-slate-600 hover:bg-brand-light hover:text-white transition-colors duration-200" href="#menores">10. Menores</a></li>
-            <li><a class="block rounded-md px-3 py-2 text-slate-600 hover:bg-brand-light hover:text-white transition-colors duration-200" href="#transferencias">11. Transferencias internacionales</a></li>
-            <li><a class="block rounded-md px-3 py-2 text-slate-600 hover:bg-brand-light hover:text-white transition-colors duration-200" href="#cambios">12. Cambios a esta política</a></li>
-            <li><a class="block rounded-md px-3 py-2 text-slate-600 hover:bg-brand-light hover:text-white transition-colors duration-200" href="#contacto">13. Contacto</a></li>
-          </ol>
-        </nav>
-      </aside>
-
-      <article class="lg:col-span-9 mt-12 lg:mt-0">
-        <div class="bg-white rounded-2xl shadow-lg p-6 md:p-10 prose prose-slate max-w-none prose-a:text-brand hover:prose-a:text-brand-dark prose-h2:border-b prose-h2:pb-3">
-          <p class="lead">En <strong>CormeiPro</strong> respetamos tu privacidad. Esta política describe qué datos recopilamos, cómo los usamos y cuáles son tus derechos.</p>
-          
-          <section id="responsable">
-            <h2>1. Responsable del tratamiento</h2>
-            <p><strong>Corporación CORMEI</strong> (o la entidad que corresponda) es responsable del tratamiento de datos de la app <strong>CormeiPro</strong>.</p>
-            <ul>
-              <li><strong>Domicilio:</strong> Lima Av.Faisanes 284 Chorrillos</li>
-              <li><strong>Sitio web:</strong> <a href="http://190.102.151.108/">http://190.102.151.108/</a></li>
-              <li><strong>Correo:</strong> <a href="mailto:sistemas@cormei.com">sistemas@cormei.com</a></li>
-            </ul>
-          </section>
-
-          <section id="datos-que-recopilamos">
-            <h2>2. Datos que recopilamos</h2>
-            <p>La app puede tratar las siguientes categorías de datos, según su uso:</p>
-            <ul>
-                <li><strong>Identificación laboral</strong> (p. ej., código de trabajador, área, cargo) cuando se escanean credenciales o códigos QR internos.</li>
-                <li><strong>Imágenes</strong> capturadas por la cámara para validaciones/adjuntos operativos.</li>
-                <li><strong>Datos de localización</strong> (aproximada o precisa) para funcionalidades que lo requieran.</li>
-                <li><strong>Datos técnicos</strong> del dispositivo (modelo, sistema, identificadores no persistentes), registros de eventos y diagnósticos.</li>
-                <li><strong>URLs de documentos</strong> (p. ej., IPERC, Políticas, Matriz Ambiental) que el usuario decida abrir desde la app.</li>
-            </ul>
-            <p><small>Nota: No vendemos datos personales.</small></p>
-          </section>
-
-          <section id="permisos">
-            <h2>3. Permisos de Android utilizados</h2>
-            <div class="not-prose mt-6 grid gap-4 md:grid-cols-2">
-              <div class="bg-slate-50/70 rounded-xl p-5 border border-slate-200 flex items-start gap-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                <div>
-                  <h3 class="font-semibold text-slate-800">Cámara</h3>
-                  <p class="text-sm text-slate-600 mt-1">Para escanear códigos QR y capturar imágenes en procesos internos.</p>
-                </div>
-              </div>
-              <div class="bg-slate-50/70 rounded-xl p-5 border border-slate-200 flex items-start gap-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                <div>
-                  <h3 class="font-semibold text-slate-800">Ubicación</h3>
-                  <p class="text-sm text-slate-600 mt-1">Necesario para funciones que requieren geolocalización operativa.</p>
-                </div>
-              </div>
-              <div class="bg-slate-50/70 rounded-xl p-5 border border-slate-200 flex items-start gap-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9V3m0 18a9 9 0 009-9m-9 9a9 9 0 00-9-9" /></svg>
-                <div>
-                  <h3 class="font-semibold text-slate-800">Internet</h3>
-                  <p class="text-sm text-slate-600 mt-1">Permite la conexión con nuestros servicios y la consulta de documentos.</p>
-                </div>
-              </div>
-              <div class="bg-slate-50/70 rounded-xl p-5 border border-slate-200 flex items-start gap-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-                <div>
-                  <h3 class="font-semibold text-slate-800">Teléfono</h3>
-                  <p class="text-sm text-slate-600 mt-1">Para realizar llamadas directas a contactos de emergencia o soporte.</p>
-                </div>
-              </div>
-            </div>
-             <p class="text-sm mt-4">Puedes gestionar estos permisos desde <em>Ajustes &gt; Aplicaciones &gt; CormeiPro &gt; Permisos</em> en tu dispositivo.</p>
-          </section>
-          
-          <section id="finalidades">
-            <h2>4. Finalidades del tratamiento</h2>
-            <ul>
-                <li>Identificación del trabajador y verificación de información laboral mediante QR.</li>
-                <li>Acceso a documentos corporativos (IPERC, políticas, matrices, etc.).</li>
-                <li>Cumplimiento de obligaciones legales y de seguridad y salud en el trabajo (SST).</li>
-                <li>Mejora del servicio, analítica de uso y diagnóstico de fallos.</li>
-                <li>Atención de consultas y soporte técnico.</li>
-            </ul>
-          </section>
-
-          <section id="bases-legales">
-            <h2>5. Bases legales</h2>
-             <ul>
-                <li><strong>Ejecución de relación contractual/laboral</strong> y medidas precontractuales.</li>
-                <li><strong>Interés legítimo</strong> en seguridad operativa y mejora del servicio.</li>
-                <li><strong>Consentimiento</strong> cuando sea requerido (p. ej., permisos opcionales).</li>
-                <li><strong>Cumplimiento legal</strong> en materia de SST y normativa aplicable.</li>
-             </ul>
-          </section>
-
-          <section id="conservacion">
-            <h2>6. Plazos de conservación</h2>
-            <p>Conservamos los datos durante el tiempo necesario para cumplir las finalidades indicadas y/o los plazos exigidos por ley. Los registros técnicos y de errores se almacenan por periodos razonables para diagnóstico y mejora.</p>
-          </section>
-
-          <section id="comparticion">
-             <h2>7. Comunicación de datos y proveedores</h2>
-             <p>Podemos compartir datos con proveedores que nos prestan servicios de infraestructura, analítica y comunicaciones, bajo contratos que garantizan confidencialidad y seguridad (p. ej., <strong>Google/Firebase</strong> para analítica y crash reporting). No vendemos datos personales.</p>
-          </section>
-
-          <section id="seguridad">
-            <h2>8. Medidas de seguridad</h2>
-            <p>Aplicamos medidas técnicas y organizativas para proteger los datos (cifrado en tránsito, controles de acceso, registros, pruebas y formación). Aun así, ninguna transmisión o almacenamiento es 100% seguro.</p>
-          </section>
-
-          <section id="tus-derechos">
-            <h2>9. Tus derechos</h2>
-            <p>Puedes ejercer los derechos de acceso, rectificación, supresión, oposición, portabilidad y limitación escribiendo a <a href="mailto:soporte@cormei.com">soporte@cormei.com</a>. Si lo prefieres, contáctanos por los canales indicados en esta política.</p>
-          </section>
-
-          <section id="menores">
-            <h2>10. Menores de edad</h2>
-            <p>La app está dirigida a personal autorizado. No está destinada a menores de edad.</p>
-          </section>
-          
-          <section id="transferencias">
-            <h2>11. Transferencias internacionales</h2>
-            <p>En caso de alojar datos en proveedores (p. ej., Google/Firebase) ubicados fuera de tu país, garantizamos salvaguardas adecuadas conforme a la normativa aplicable.</p>
-          </section>
-
-          <section id="cambios">
-            <h2>12. Cambios a esta política</h2>
-            <p>Podemos actualizar esta política para reflejar cambios legales o funcionales. La versión vigente se publicará en este mismo enlace.</p>
-          </section>
-
-          <section id="contacto">
-            <h2>13. Contacto</h2>
-            <p>Si tienes preguntas sobre esta política o el tratamiento de tus datos, contáctanos en <a href="mailto:sistemas@cormei.com">sistemas@cormei.com</a>.</p>
-          </section>
+    <!-- Header Hero -->
+    <header class="bg-gradient-to-r from-brand-darker to-brand text-white shadow-lg relative overflow-hidden">
+        <div
+            class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] opacity-20">
         </div>
-        
-        <footer class="mt-8 pt-6 border-t border-slate-200 text-sm text-slate-600 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p>© <span id="year"></span> Corporación CORMEI — CormeiPro</p>
-            <p class="text-slate-500">Última actualización: <span class="font-medium text-slate-700">[16/09/2025]</span></p>
-        </footer>
-      </article>
-    </div>
-  </main>
-  
-  <footer class="text-center py-8 px-6">
-       <p class="text-xs text-slate-500 max-w-xl mx-auto">
-         Esta página cumple con el requisito de política de privacidad de Google Play al describir permisos (p. ej., <code>CAMERA</code>, <code>LOCATION</code>) y su finalidad. Asegúrate de mantenerla accesible públicamente.
-       </p>
-  </footer>
+        <div class="max-w-7xl mx-auto px-6 py-16 md:py-20 text-center relative z-10">
+            <div
+                class="inline-flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full mb-6 border border-white/20 px-4 py-1.5 shadow-xl">
+                <span class="text-xs font-semibold tracking-wide uppercase text-white/90">Documentación Oficial</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 drop-shadow-sm">
+                Política de Privacidad
+            </h1>
+            <p class="text-lg md:text-xl text-white/80 font-light max-w-2xl mx-auto">
+                Transparencia y seguridad para los usuarios de la aplicación móvil <strong>Cormei Sac</strong>
+            </p>
+        </div>
+        <!-- Decorative curve -->
+        <div class="absolute bottom-0 left-0 right-0 h-12 bg-slate-50"
+            style="clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 100%);"></div>
+    </header>
 
-  <script>
-    // Año dinámico en el pie
-    document.getElementById('year').textContent = new Date().getFullYear();
+    <main class="max-w-7xl mx-auto px-6 py-12 lg:py-16">
+        <div class="lg:grid lg:grid-cols-12 lg:gap-12">
 
-    // Lógica para resaltar el link activo en la navegación
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('#toc-nav a');
+            <!-- Sidebar de Navegación -->
+            <aside class="hidden lg:block lg:col-span-3">
+                <div class="sticky top-8">
+                    <nav class="bg-white rounded-xl shadow-soft p-6 border border-slate-100">
+                        <p
+                            class="font-bold text-slate-800 mb-4 text-sm uppercase tracking-wider border-b border-slate-100 pb-2">
+                            Índice</p>
+                        <ol id="toc-nav" class="space-y-1 text-sm">
+                            <li><a class="flex items-center gap-2 rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-50 hover:text-brand transition-all duration-200"
+                                    href="#responsable"><span class="opacity-50 text-xs">01</span> Responsable</a></li>
+                            <li><a class="flex items-center gap-2 rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-50 hover:text-brand transition-all duration-200"
+                                    href="#datos-que-recopilamos"><span class="opacity-50 text-xs">02</span>
+                                    Recopilación de datos</a></li>
+                            <li><a class="flex items-center gap-2 rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-50 hover:text-brand transition-all duration-200"
+                                    href="#permisos"><span class="opacity-50 text-xs">03</span> Permisos Android</a>
+                            </li>
+                            <li><a class="flex items-center gap-2 rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-50 hover:text-brand transition-all duration-200"
+                                    href="#finalidades"><span class="opacity-50 text-xs">04</span> Finalidades</a></li>
+                            <li><a class="flex items-center gap-2 rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-50 hover:text-brand transition-all duration-200"
+                                    href="#bases-legales"><span class="opacity-50 text-xs">05</span> Bases legales</a>
+                            </li>
+                            <li><a class="flex items-center gap-2 rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-50 hover:text-brand transition-all duration-200"
+                                    href="#conservacion"><span class="opacity-50 text-xs">06</span> Conservación</a>
+                            </li>
+                            <li><a class="flex items-center gap-2 rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-50 hover:text-brand transition-all duration-200"
+                                    href="#comparticion"><span class="opacity-50 text-xs">07</span> Terceros</a></li>
+                            <li><a class="flex items-center gap-2 rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-50 hover:text-brand transition-all duration-200"
+                                    href="#seguridad"><span class="opacity-50 text-xs">08</span> Seguridad</a></li>
+                            <li><a class="flex items-center gap-2 rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-50 hover:text-brand transition-all duration-200"
+                                    href="#tus-derechos"><span class="opacity-50 text-xs">09</span> Derechos</a></li>
+                            <li><a class="flex items-center gap-2 rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-50 hover:text-brand transition-all duration-200"
+                                    href="#menores"><span class="opacity-50 text-xs">10</span> Menores</a></li>
+                            <li><a class="flex items-center gap-2 rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-50 hover:text-brand transition-all duration-200"
+                                    href="#transferencias"><span class="opacity-50 text-xs">11</span> Transferencias</a>
+                            </li>
+                            <li><a class="flex items-center gap-2 rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-50 hover:text-brand transition-all duration-200"
+                                    href="#cambios"><span class="opacity-50 text-xs">12</span> Cambios</a></li>
+                            <li><a class="flex items-center gap-2 rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-50 hover:text-brand transition-all duration-200"
+                                    href="#contacto"><span class="opacity-50 text-xs">13</span> Contacto</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </aside>
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          navLinks.forEach(link => {
-            link.classList.remove('bg-brand', 'text-white');
-            if (link.getAttribute('href').substring(1) === entry.target.id) {
-              link.classList.add('bg-brand', 'text-white');
-            }
-          });
-        }
-      });
-    }, { rootMargin: '0px 0px -75% 0px' }); 
+            <!-- Contenido Principal -->
+            <article class="lg:col-span-9">
+                <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-8 md:p-12 content-body">
 
-    sections.forEach(section => {
-      observer.observe(section);
-    });
-  </script>
+                    <p class="lead border-l-4 border-brand pl-6 bg-slate-50 py-4 rounded-r-lg">
+                        En <strong>Cormei Sac</strong> respetamos tu privacidad. Esta política describe qué datos
+                        recopilamos, cómo los usamos y cuáles son tus derechos.
+                    </p>
+
+                    <section id="responsable">
+                        <h2>1. Responsable del tratamiento</h2>
+                        <p><strong>Corporación CORMEI</strong> es responsable del tratamiento de datos de la app
+                            <strong>Cormei Sac</strong>.
+                        </p>
+                        <div class="bg-slate-50 p-6 rounded-lg border border-slate-200 mt-4 text-sm">
+                            <ul class="!mb-0 !pl-0 !list-none space-y-2">
+                                <li class="flex flex-col sm:flex-row sm:items-center gap-2">
+                                    <span class="font-semibold text-slate-800 w-24">Domicilio:</span>
+                                    <span>Lima Av.Faisanes 284 Chorrillos</span>
+                                </li>
+                                <li class="flex flex-col sm:flex-row sm:items-center gap-2">
+                                    <span class="font-semibold text-slate-800 w-24">Sitio web:</span>
+                                    <a href="https://www.cormei.com/portal/"
+                                        class="break-all">https://www.cormei.com/portal/</a>
+                                </li>
+                                <li class="flex flex-col sm:flex-row sm:items-center gap-2">
+                                    <span class="font-semibold text-slate-800 w-24">Correo:</span>
+                                    <a href="mailto:sistemas@cormei.com">sistemas@cormei.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="datos-que-recopilamos">
+                        <h2>2. Datos que recopilamos</h2>
+                        <p>La app puede tratar las siguientes categorías de datos, según su uso:</p>
+                        <ul class="space-y-2">
+                            <li><strong>Identificación laboral</strong> (p. ej., código de trabajador, área, cargo)
+                                cuando se escanean credenciales o códigos QR internos.</li>
+                            <li><strong>Imágenes</strong> capturadas por la cámara para validaciones/adjuntos
+                                operativos.</li>
+                            <li><strong>Datos de localización</strong> (aproximada o precisa) para funcionalidades que
+                                lo requieran.</li>
+                            <li><strong>Datos técnicos</strong> del dispositivo (modelo, sistema, identificadores no
+                                persistentes), registros de eventos y diagnósticos.</li>
+                            <li><strong>URLs de documentos</strong> (p. ej., IPERC, Políticas, Matriz Ambiental) que el
+                                usuario decida abrir desde la app.</li>
+                        </ul>
+                        <div
+                            class="mt-4 p-4 bg-blue-50 text-blue-800 rounded-lg text-sm border border-blue-100 flex items-start gap-3">
+                            <svg class="w-5 h-5 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <p class="!mb-0"><small>Nota: No vendemos datos personales.</small></p>
+                        </div>
+                    </section>
+
+                    <section id="permisos">
+                        <h2>3. Permisos de Android utilizados</h2>
+                        <div class="not-prose mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-2">
+                            <!-- Card Cámara -->
+                            <div
+                                class="group bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md hover:border-brand-light/30 transition-all duration-300 relative overflow-hidden">
+                                <div
+                                    class="absolute top-0 right-0 w-16 h-16 bg-brand-light/5 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110">
+                                </div>
+                                <div class="flex items-start gap-5">
+                                    <div
+                                        class="p-3 bg-brand-light/10 text-brand rounded-lg group-hover:bg-brand group-hover:text-white transition-colors duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-bold text-slate-800 mb-1">Cámara</h3>
+                                        <p class="text-sm text-slate-600 leading-relaxed">Para escanear códigos QR y
+                                            capturar imágenes en procesos internos.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card Ubicación -->
+                            <div
+                                class="group bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md hover:border-brand-light/30 transition-all duration-300 relative overflow-hidden">
+                                <div
+                                    class="absolute top-0 right-0 w-16 h-16 bg-brand-light/5 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110">
+                                </div>
+                                <div class="flex items-start gap-5">
+                                    <div
+                                        class="p-3 bg-brand-light/10 text-brand rounded-lg group-hover:bg-brand group-hover:text-white transition-colors duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-bold text-slate-800 mb-1">Ubicación</h3>
+                                        <p class="text-sm text-slate-600 leading-relaxed">Necesario para funciones que
+                                            requieren geolocalización operativa.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card Internet -->
+                            <div
+                                class="group bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md hover:border-brand-light/30 transition-all duration-300 relative overflow-hidden">
+                                <div
+                                    class="absolute top-0 right-0 w-16 h-16 bg-brand-light/5 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110">
+                                </div>
+                                <div class="flex items-start gap-5">
+                                    <div
+                                        class="p-3 bg-brand-light/10 text-brand rounded-lg group-hover:bg-brand group-hover:text-white transition-colors duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9V3m0 18a9 9 0 009-9m-9 9a9 9 0 00-9-9" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-bold text-slate-800 mb-1">Internet</h3>
+                                        <p class="text-sm text-slate-600 leading-relaxed">Permite la conexión con
+                                            nuestros servicios y la consulta de documentos.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="finalidades" class="pt-4">
+                        <h2>4. Finalidades del tratamiento</h2>
+                        <ul>
+                            <li>Identificación del trabajador y verificación de información laboral mediante QR.</li>
+                            <li>Acceso a documentos corporativos (IPERC, políticas, matrices, etc.).</li>
+                            <li>Cumplimiento de obligaciones legales y de seguridad y salud en el trabajo (SST).</li>
+                            <li>Mejora del servicio, analítica de uso y diagnóstico de fallos.</li>
+                            <li>Atención de consultas y soporte técnico.</li>
+                        </ul>
+                    </section>
+
+                    <section id="bases-legales">
+                        <h2>5. Bases legales</h2>
+                        <div class="grid md:grid-cols-2 gap-4 mt-4 not-prose">
+                            <div class="bg-slate-50 p-4 rounded-lg border border-slate-100">
+                                <p class="font-semibold text-slate-800 mb-1">Relación Contractual</p>
+                                <p class="text-sm text-slate-600">Ejecución de relación laboral y medidas
+                                    precontractuales.</p>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded-lg border border-slate-100">
+                                <p class="font-semibold text-slate-800 mb-1">Interés Legítimo</p>
+                                <p class="text-sm text-slate-600">Seguridad operativa y mejora del servicio.</p>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded-lg border border-slate-100">
+                                <p class="font-semibold text-slate-800 mb-1">Consentimiento</p>
+                                <p class="text-sm text-slate-600">Cuando sea requerido (p. ej., permisos opcionales).
+                                </p>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded-lg border border-slate-100">
+                                <p class="font-semibold text-slate-800 mb-1">Cumplimiento Legal</p>
+                                <p class="text-sm text-slate-600">En materia de SST y normativa aplicable.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="conservacion">
+                        <h2>6. Plazos de conservación</h2>
+                        <p>Conservamos los datos durante el tiempo necesario para cumplir las finalidades indicadas y/o
+                            los plazos exigidos por ley. Los registros técnicos y de errores se almacenan por periodos
+                            razonables para diagnóstico y mejora.</p>
+                    </section>
+
+                    <section id="comparticion">
+                        <h2>7. Comunicación de datos y proveedores</h2>
+                        <p>Podemos compartir datos con proveedores que nos prestan servicios de infraestructura,
+                            analítica y comunicaciones, bajo contratos que garantizan confidencialidad y seguridad (p.
+                            ej., <strong>Google/Firebase</strong> para analítica y crash reporting). No vendemos datos
+                            personales.</p>
+                    </section>
+
+                    <section id="seguridad">
+                        <h2>8. Medidas de seguridad</h2>
+                        <p>Aplicamos medidas técnicas y organizativas para proteger los datos (cifrado en tránsito,
+                            controles de acceso, registros, pruebas y formación). Aun así, ninguna transmisión o
+                            almacenamiento es 100% seguro.</p>
+                    </section>
+
+                    <section id="tus-derechos">
+                        <h2>9. Tus derechos</h2>
+                        <div class="bg-brand/[0.03] border border-brand/10 rounded-lg p-6 my-4">
+                            <p class="!mb-3">Puedes ejercer los derechos de acceso, rectificación, supresión, oposición,
+                                portabilidad y limitación.</p>
+                            <a href="mailto:sistemas@cormei.com"
+                                class="inline-flex items-center justify-center px-4 py-2 bg-brand text-white rounded-md font-medium text-sm hover:bg-brand-dark transition-colors shadow-sm">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                                Contactar soporte (sistemas@cormei.com)
+                            </a>
+                            <p class="text-sm text-slate-500 mt-3 !mb-0">Si lo prefieres, contáctanos por los canales
+                                indicados en esta política.</p>
+                        </div>
+                    </section>
+
+                    <section id="menores">
+                        <h2>10. Menores de edad</h2>
+                        <p>La app está dirigida a personal autorizado. No está destinada a menores de edad.</p>
+                    </section>
+
+                    <section id="transferencias">
+                        <h2>11. Transferencias internacionales</h2>
+                        <p>En caso de alojar datos en proveedores (p. ej., Google/Firebase) ubicados fuera de tu país,
+                            garantizamos salvaguardas adecuadas conforme a la normativa aplicable.</p>
+                    </section>
+
+                    <section id="cambios">
+                        <h2>12. Cambios a esta política</h2>
+                        <p>Podemos actualizar esta política para reflejar cambios legales o funcionales. La versión
+                            vigente se publicará en este mismo enlace.</p>
+                    </section>
+
+                    <section id="contacto">
+                        <h2>13. Contacto</h2>
+                        <p>Si tienes preguntas sobre esta política o el tratamiento de tus datos, contáctanos en <a
+                                href="mailto:sistemas@cormei.com">sistemas@cormei.com</a>.</p>
+                    </section>
+                </div>
+
+                <footer class="mt-12 text-center">
+                    <div
+                        class="inline-flex items-center gap-2 text-sm text-slate-500 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100">
+                        <span>© <span id="year"></span> Corporación CORMEI — Cormei Sac</span>
+                        <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+                        <span>Última actualización: <span class="font-medium text-slate-700">11/12/2025</span></span>
+                    </div>
+                </footer>
+            </article>
+        </div>
+    </main>
+
+    <footer class="py-8 px-6 bg-slate-100 border-t border-slate-200 mt-12">
+        <div class="max-w-2xl mx-auto text-center">
+            <p class="text-xs text-slate-500 leading-relaxed">
+                Esta página cumple con el requisito de política de privacidad de Google Play al describir permisos (p.
+                ej., <code>CAMERA</code>, <code>LOCATION</code>) y su finalidad. Asegúrate de mantenerla accesible
+                públicamente.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Año dinámico en el pie
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Lógica para resaltar el link activo en la navegación
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('#toc-nav a');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => {
+                        // Reset styles
+                        link.classList.remove('bg-brand', 'text-white', 'shadow-md');
+                        link.classList.add('text-slate-600', 'hover:bg-slate-50', 'hover:text-brand');
+
+                        // Active style
+                        if (link.getAttribute('href').substring(1) === entry.target.id) {
+                            link.classList.remove('text-slate-600', 'hover:bg-slate-50', 'hover:text-brand');
+                            link.classList.add('bg-brand', 'text-white', 'shadow-md');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '0px 0px -80% 0px' });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
+
 </html>
